@@ -10,11 +10,11 @@ namespace VIO {
         KIMERA_POINTER_TYPEDEFS(FrontendParams);
         FrontendParams();
 
-        void print() const;
-        bool parseYAML(const std::string& filepath);
+        void print() const {return;}
+        bool parseYAML(const std::string& filepath) {return true;}
 
     protected:
-        virtual bool equals(const PipelineParams& obj) const;
+        virtual bool equals(const PipelineParams& obj) const {return true;}
 
 
     };

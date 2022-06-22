@@ -12,13 +12,13 @@ namespace VIO {
     virtual ~ImuParams() = default;
 
     public:
-    bool equals(const FrontendParams& tp2, double tol = 1e-10) const;
-    bool parseYAML(const std::string& filepath) override;
-    void print() const override;
+    bool equals(const ImuParams& tp2, double tol = 1e-10) const {return true;}
+    bool parseYAML(const std::string& filepath) override {return true;}
+    void print() const override {return;}
 
     protected:
     bool equals(const PipelineParams& obj) const override{
-        const auto& rhs = static_cast<const FrontendParams&>(obj);
+        const auto& rhs = static_cast<const ImuParams&>(obj);
         return equals(rhs);
     }
     

@@ -25,9 +25,9 @@ namespace VIO {
 
         virtual ~VioParams() = default;
 
-        bool parseYAML(const std::string& folder_path) override;
+        bool parseYAML(const std::string& folder_path) override {return true;}
         
-        void print() const override;
+        void print() const override {return;}
 
         public:  
             ImuParams imu_params_;
@@ -36,7 +36,7 @@ namespace VIO {
             BackendParams::Ptr backend_params_;
 
         protected:
-            bool equals(const PipelineParams& obj) const override;
+            bool equals(const PipelineParams& obj) const override {return true;}
 
     };
 }
