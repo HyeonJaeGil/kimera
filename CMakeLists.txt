@@ -12,10 +12,18 @@ add_subdirectory(include/kimera-vio/backend)
 add_subdirectory(include/kimera-vio/imu-frontend)
 add_subdirectory(include/kimera-vio/pipeline)
 add_subdirectory(src/pipeline)
+add_subdirectory(src/imu-frontend)
+add_subdirectory(src/frontend)
 
 
 target_link_libraries(${PROJECT_NAME})
 target_include_directories(${PROJECT_NAME}
     PUBLIC
     $<BUILD_INTERFACE:${CMAKE_CURRENT_LIST_DIR}/include>
+    # $<INSTALL_INTERFACE:include>
 )
+
+add_library(kimera_vio::kimera_vio ALIAS kimera_vio)
+
+add_executable(KimeraVIO ./examples/KimeraVIO.cpp)
+target_link_libraries(KimeraVIO PUBLIC kimera_vio::kimera_vio)
