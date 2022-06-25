@@ -4,6 +4,8 @@
 
 #include "kimera-vio/pipeline/Pipeline-definitions.h"
 #include "kimera-vio/utils/Macros.h"
+#include "kimera-vio/imu-frontend/ImuFrontend.h"
+#include "kimera-vio/frontend/Frame.h"
 
 namespace VIO
 {
