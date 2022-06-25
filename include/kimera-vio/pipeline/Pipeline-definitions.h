@@ -39,4 +39,7 @@ namespace VIO {
             bool equals(const PipelineParams& obj) const override {return true;}
 
     };
+
+   typedef std::function<void()> ShutdownPipelineCallback;
+
 }
