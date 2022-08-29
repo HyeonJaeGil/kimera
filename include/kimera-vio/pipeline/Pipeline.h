@@ -39,10 +39,10 @@ namespace VIO
         virtual void resume();
         virtual void registerShutdownCallback
             (const ShutdownPipelineCallback& callback) {
-                shutdown_pipeline_cb_ = callback;
+                // shutdown_pipeline_cb_ = callback;
         }
         inline std::string printStatistics() const {
-            return utils::Statistics::Print();
+            // return utils::Statistics::Print();
         }
 
     protected:
